@@ -1,6 +1,7 @@
 package pageobject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,30 +18,31 @@ public class ForWhoScooterLocators {
 
 
     // Форма "Для кого самокат". Имя
-    private By yourName = By.xpath("//div/div[2]/div[2]/div[1]/input");
+    private By yourName = By.cssSelector("div.Order_Form__17u6u > div:nth-child(1) > input");
 
     // Форма "Для кого самокат". Фамилия
-    private By yourSurname = By.xpath("//div/div[2]/div[2]/div[2]/input");
+    private By yourSurname = By.cssSelector("div.Order_Form__17u6u > div:nth-child(2) > input");
 
     // Форма "Для кого самокат". Адрес куда привезти
-    private By addressDelivery = By.xpath("//div/div[2]/div[2]/div[3]/input");
+    private By addressDelivery = By.cssSelector(" div.Order_Form__17u6u > div:nth-child(3) > input");
 
     // Форма "Для кого самокат". Станция метро
     private By clickMetroStation = By.className("select-search__input");
     // Локатор отображения выбора метро
     private By isDispalayedSelectMetroStation = By.className("select-search__select");
     // Локатор выбора станции метро
-    private By chooseMetroStation = By.xpath("//div/div[2]/div[2]/div[4]/div/div[2]/ul/li[1]");
+    private By chooseMetroStation = By.xpath("//div/div[2]/div[2]/div[4]/div/div[2]/ul/li[6]");
 
     // Форма "Для кого самокат". Телефон
-    private By phoneNumber = By.xpath("//div/div[2]/div[2]/div[5]/input");
+    private By phoneNumber = By.cssSelector("div.Order_Form__17u6u > div:nth-child(5) > input");
 
     // Форма "Для кого самокат". Кнопка "Далее"
-    private By buttonNext = By.xpath("//div/div[2]/div[3]/button");
+    private By buttonNext = By.cssSelector("div.Order_NextButton__1_rCA > button");
 
 
 
     public void sendKeysName(String name) {
+
         webDriver.findElement(yourName).sendKeys(name);
     }
     public void sendKeysSurname(String surname) {
@@ -57,7 +59,7 @@ public class ForWhoScooterLocators {
     }
     public void chooseMetroStation() {
         webDriver.findElement(chooseMetroStation).click();
-    }
+  }
     public void sendKeysPhoneNumber(String phone){
         webDriver.findElement(phoneNumber).sendKeys(phone);
     }

@@ -3,6 +3,16 @@ import pageobject.*;
 
 public class OrderTestCases extends TestBase{
 
+    private static final String url = "https://qa-scooter.praktikum-services.ru/";
+    private final String name = "Кирилл";
+    private final String engName = "Kirill";
+    private final String surname = "Пресняков";
+    private final String engSurname = "Presniakov";
+    private final String address = "Москва, 3й Спарведливый пр-д, д 46";
+    private final String phone = "+79858885458";
+    private final String date = "12.12.2023";
+    private final String comment = "Позвонить за 10 минут до приезда";
+
     @Test
     public void topOrderButtonValidValues(){
         MainPageLocators mainPageLocators = new MainPageLocators(driver);
@@ -12,25 +22,25 @@ public class OrderTestCases extends TestBase{
         OrderPlaceLocators orderPlaceLocator = new OrderPlaceLocators(driver);
 
 
-        mainPageLocators.open();
+        mainPageLocators.open(url);
         mainPageLocators.clickTopOrderButton();
         mainPageLocators.clickCloseCookie();
 
-        forWhoScooterLocators.sendKeysName("Пресняков");
-        forWhoScooterLocators.sendKeysSurname("Кирилл");
-        forWhoScooterLocators.sendKeysAddress("Москва, ул Пушкина, д Колотушкина");
+        forWhoScooterLocators.sendKeysName(name);
+        forWhoScooterLocators.sendKeysSurname(surname);
+        forWhoScooterLocators.sendKeysAddress(address);
         forWhoScooterLocators.clickMetroStation();
         forWhoScooterLocators.isDisplayedSelectMetroStation();
         forWhoScooterLocators.chooseMetroStation();
-        forWhoScooterLocators.sendKeysPhoneNumber("+79858885458");
+        forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter();
+        aboutRentLocators.WhenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
         aboutRentLocators.selectColor();
-        aboutRentLocators.sendCommentToCourier("Позвонить за 10 минут до приезда");
+        aboutRentLocators.sendCommentToCourier(comment);
         aboutRentLocators.clickButtonOrder();
 
         wantOrderLocators.clickButtonYes();
@@ -48,25 +58,25 @@ public class OrderTestCases extends TestBase{
         OrderPlaceLocators orderPlaceLocator = new OrderPlaceLocators(driver);
 
 
-        mainPageLocators.open();
+        mainPageLocators.open(url);
         mainPageLocators.clickTopOrderButton();
         mainPageLocators.clickCloseCookie();
 
-        forWhoScooterLocators.sendKeysName("Anna");
-        forWhoScooterLocators.sendKeysSurname("Dicaprio");
-        forWhoScooterLocators.sendKeysAddress("Москва, 3й Спарведливый пр-д, д 46");
+        forWhoScooterLocators.sendKeysName(engName);
+        forWhoScooterLocators.sendKeysSurname(engSurname);
+        forWhoScooterLocators.sendKeysAddress(address);
         forWhoScooterLocators.clickMetroStation();
         forWhoScooterLocators.isDisplayedSelectMetroStation();
         forWhoScooterLocators.chooseMetroStation();
-        forWhoScooterLocators.sendKeysPhoneNumber("89858885458");
+        forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter();
+        aboutRentLocators.WhenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
         aboutRentLocators.selectColor();
-        aboutRentLocators.sendCommentToCourier("");
+        aboutRentLocators.sendCommentToCourier(comment);
         aboutRentLocators.clickButtonOrder();
 
         wantOrderLocators.clickButtonYes();
@@ -84,26 +94,26 @@ public class OrderTestCases extends TestBase{
         OrderPlaceLocators orderPlaceLocator = new OrderPlaceLocators(driver);
 
 
-        mainPageLocators.open();
+        mainPageLocators.open(url);
         mainPageLocators.clickCloseCookie();
         mainPageLocators.clickLowOrderButton();
 
 
-        forWhoScooterLocators.sendKeysName("Пресняков");
-        forWhoScooterLocators.sendKeysSurname("Кирилл");
-        forWhoScooterLocators.sendKeysAddress("Москва, ул Пушкина, д Колотушкина");
+        forWhoScooterLocators.sendKeysName(name);
+        forWhoScooterLocators.sendKeysSurname(surname);
+        forWhoScooterLocators.sendKeysAddress(address);
         forWhoScooterLocators.clickMetroStation();
         forWhoScooterLocators.isDisplayedSelectMetroStation();
         forWhoScooterLocators.chooseMetroStation();
-        forWhoScooterLocators.sendKeysPhoneNumber("+79858885458");
+        forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter();
+        aboutRentLocators.WhenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
         aboutRentLocators.selectColor();
-        aboutRentLocators.sendCommentToCourier("Позвонить за 10 минут до приезда");
+        aboutRentLocators.sendCommentToCourier(comment);
         aboutRentLocators.clickButtonOrder();
 
         wantOrderLocators.clickButtonYes();
@@ -121,25 +131,25 @@ public class OrderTestCases extends TestBase{
         OrderPlaceLocators orderPlaceLocator = new OrderPlaceLocators(driver);
 
 
-        mainPageLocators.open();
+        mainPageLocators.open(url);
         mainPageLocators.clickLowOrderButton();
         mainPageLocators.clickCloseCookie();
 
-        forWhoScooterLocators.sendKeysName("Anna");
-        forWhoScooterLocators.sendKeysSurname("Dicaprio");
-        forWhoScooterLocators.sendKeysAddress("Москва, 3й Спарведливый пр-д, д 46");
+        forWhoScooterLocators.sendKeysName(engName);
+        forWhoScooterLocators.sendKeysSurname(engSurname);
+        forWhoScooterLocators.sendKeysAddress(address);
         forWhoScooterLocators.clickMetroStation();
         forWhoScooterLocators.isDisplayedSelectMetroStation();
         forWhoScooterLocators.chooseMetroStation();
-        forWhoScooterLocators.sendKeysPhoneNumber("89858885458");
+        forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter();
+        aboutRentLocators.WhenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
         aboutRentLocators.selectColor();
-        aboutRentLocators.sendCommentToCourier("");
+        aboutRentLocators.sendCommentToCourier(comment);
         aboutRentLocators.clickButtonOrder();
 
         wantOrderLocators.clickButtonYes();

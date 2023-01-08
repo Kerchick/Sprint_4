@@ -20,7 +20,7 @@ public class MainPageLocators {
     // Кнопка "Заказать" вверху страницы
     private By topOrderButton = By.className("Button_Button__ra12g");
     // Кнопка "Заказать" внизу страницы
-    private By lowOrderButton = By.xpath("//div/div/div[4]/div[2]/div[5]/button");
+    private By lowOrderButton = By.cssSelector("div.Home_FinishButton__1_cWm>button");
     // FAQ. Кнопка "Сколько это стоит? И как оплатить?"
     private By buttonHowMuch = By.id("accordion__heading-0");
     //FAQ. Раскрытие по кнопке "Сколько это стоит? И как оплатить?"
@@ -162,8 +162,8 @@ public class MainPageLocators {
         assertEquals("Да, обязательно. Всем самокатов! И Москве, и Московской области.", webDriver.findElement(getILeaveBehindMKADResponseText).getText());
     }
 
-    public void open() {
-        webDriver.get("https://qa-scooter.praktikum-services.ru/");
+    public void open(String url) {
+        webDriver.get(url);
     }
 
 }

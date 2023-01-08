@@ -13,33 +13,33 @@ public class AboutRentLocators {
 
 
     // Форма "Про аренду". Когда привезти самокат
-    private By sendKeysWhenBringScooter = By.xpath("//div/div[2]/div[2]/div[1]/div[1]/div/input");
+    private By sendKeysWhenBringScooter = By.cssSelector("div.react-datepicker-wrapper > div > input");
     // Локатор клика в календаре
-    private By clickWhenBringScooter = By.xpath("//div/div[2]/div[2]/div[1]/div[2]/div[2]/div/div/div[2]/div[2]/div[5]/div[6]");
+    private By clickWhenBringScooter = By.cssSelector("div.react-datepicker__day.react-datepicker__day--020");
 
     // Форма "Про аренду". Срок аренды
-    private By daysRent = By.xpath("//div/div[2]/div[2]/div[2]/div");
+    private By daysRent = By.cssSelector("div.Dropdown-placeholder");
     // Локатор выбора срока аренды (2дня)
-    private By twoDays = By.xpath("//div/div[2]/div[2]/div[2]/div[2]/div[2]");
+    private By twoDays = By.cssSelector("div.Dropdown-menu > div:nth-child(2)");
 
     // Форма "Про аренду". Цвет самоката
-    private By scooterColor = By.xpath("//div/div[2]/div[2]/div[3]/label[2]");
+    private By scooterColor = By.cssSelector("div > div.Order_Content__bmtHS > div.Order_Form__17u6u > div.Order_Checkboxes__3lWSI > label:nth-child(4)");
 
     // Форма "Про аренду". Комментарий курьеру
-    private By commentToCourier = By.xpath("//div/div[2]/div[2]/div[4]/input");
+    private By commentToCourier = By.cssSelector("div.Order_Content__bmtHS > div.Order_Form__17u6u > div.Input_InputContainer__3NykH > input");
 
     // Форма "Про аренду". Кнопка "Назад"
-    private By buttonBack = By.xpath("/div/div[2]/div[3]/button[1]");
+    private By buttonBack = By.cssSelector("div.Order_Buttons__1xGrp > button.Button_Button__ra12g.Button_Middle__1CSJM.Button_Inverted__3IF-i");
 
     // Форма "Про аренду". Кнопка "Заказать"
-    private By buttonOrder = By.xpath("//div/div[2]/div[3]/button[2]");
+    private By buttonOrder = By.cssSelector("div.Order_Buttons__1xGrp > button:nth-child(2)");
 
 
 
 
 
-    public void WhenBringScooter() {
-        webDriver.findElement(sendKeysWhenBringScooter).sendKeys("31.12.2022");
+    public void WhenBringScooter(String date) {
+        webDriver.findElement(sendKeysWhenBringScooter).sendKeys(date);
     }
     public void clickButtonOrder() {
         webDriver.findElement(buttonOrder).click();

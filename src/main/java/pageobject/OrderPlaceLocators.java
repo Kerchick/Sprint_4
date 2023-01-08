@@ -13,7 +13,7 @@ public class OrderPlaceLocators {
 
 
     // Локатор для проверки что заказ оформлен
-    private By orderPlace = By.xpath("/html/body/div/div/div[2]/div[5]/div[1]");
+    private By orderPlace = By.className("Order_ModalHeader__3FDaJ");
 
     public void isOrderPlaceImageIsDisable() {
         assertEquals("Заказ оформлен\n" +
