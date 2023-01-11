@@ -38,7 +38,7 @@ public class AboutRentLocators {
 
 
 
-    public void WhenBringScooter(String date) {
+    public void whenBringScooter(String date) {
         webDriver.findElement(sendKeysWhenBringScooter).sendKeys(date);
     }
     public void clickButtonOrder() {

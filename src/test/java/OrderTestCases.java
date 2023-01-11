@@ -35,7 +35,7 @@ public class OrderTestCases extends TestBase{
         forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter(date);
+        aboutRentLocators.whenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
@@ -71,7 +71,7 @@ public class OrderTestCases extends TestBase{
         forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter(date);
+        aboutRentLocators.whenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
@@ -108,7 +108,7 @@ public class OrderTestCases extends TestBase{
         forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter(date);
+        aboutRentLocators.whenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
@@ -144,7 +144,7 @@ public class OrderTestCases extends TestBase{
         forWhoScooterLocators.sendKeysPhoneNumber(phone);
         forWhoScooterLocators.clickButtonNext();
 
-        aboutRentLocators.WhenBringScooter(date);
+        aboutRentLocators.whenBringScooter(date);
         aboutRentLocators.clickWhenBringScooter();
         aboutRentLocators.clickDaysRent();
         aboutRentLocators.clickTwoDaysRent();
